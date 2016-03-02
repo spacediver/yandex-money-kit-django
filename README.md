@@ -18,7 +18,7 @@
 ###Установка модуля
 * Установить пакет:
 ```
-        pip install git+https://github.com/yandex-money/yandex-money-kit-django.git
+        pip install git+https://github.com/yandex-money/yandex-money-kit-django.git#egg=django-yandex-money
 ```
 * Добавить ``yandex_money`` в ``settings.INSTALLED_APPS``:
 ```
@@ -53,13 +53,12 @@
         # информировать о случаях, когда модуль вернул Яндекс.Кассе ошибку
         YANDEX_MONEY_MAIL_ADMINS_ON_PAYMENT_ERROR = True
 ```
-* Указать в личном кабинете Яндекс.Деньги настройки для приема уведомлений:
+* Указать в личном кабинете Яндекс.Деньги следующие URL для служебных запросов и перенаправлений клиента:
 
 * paymentAvisoURL: `https://example.com/yandex-money/aviso/`
 * checkURL: `https://example.com/yandex-money/check/`
 * failURL: `https://example.com/fail-payment/`
 * successURL: `https://example.com/success-payment/`
-
 
 ###Использование
 [Полный пример использования](<https://github.com/DrMartiner/django-yandex-money/tree/develop/example>)
