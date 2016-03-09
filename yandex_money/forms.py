@@ -149,7 +149,7 @@ class PaymentForm(BasePaymentForm):
                 self.fields['cps_phone'].initial = instance.cps_phone
 
     def get_display_field_names(self):
-        return ['paymentType', 'cps_email', 'cps_phone']
+        return ['cps_email', 'cps_phone']
 
 
 class CheckForm(BasePaymentForm):
